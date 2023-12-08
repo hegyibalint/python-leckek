@@ -53,11 +53,15 @@ b = 2
 # HU: Egész számok
 # EN: Integers
 a = 1
+# Negatív egész számokat is tudunk létrehozni:
+a = -1
 
 # HU: Lebegőpontos számok
 # EN: Floating point numbers
+# A neve nem annyira fontos, csak tudjuk, hogy nem egész számokat is tudunk létrehozni.
 b = 1.5
-# - A lebegőpontos számokat a Pythonban a ponttal jelöljük, nem vesszővel!
+# Ugyanúgy tudunk negatív lebegőpontos számokat is létrehozni:
+b = -1.5
 
 # -----------------------------------------------
 # Szövegek
@@ -77,6 +81,7 @@ d = "alma"
 
 # -----------------------------------------------
 # Logikai értékek
+# EN: Boolean
 # -----------------------------------------------
 
 # HU: Igaz
@@ -87,3 +92,46 @@ e = True
 # EN: False
 f = False
 
+# A logikai értékekkel később fogunk foglalkozni.
+
+# -----------------------------------------------
+# Listák (tömbök)
+# -----------------------------------------------
+# EN: Array
+
+# A listák olyan változók, amik több dolgot is tudnak tárolni.
+# A listákat szögletes zárójellel jelöljük.
+g = [1, 2, 3, 4, 5]
+
+# Nem csak egy típusú dolgot tudnak tárolni, hanem akár vegyesen is:
+h = [1, 2, 'a', 'alma', True, False]
+
+# A listák elemeit a következő módon tudjuk elérni:
+print("A lista első eleme:", h[0])
+# Ezt a módszert indexelésnek hívjuk.
+
+# FONTOS: Az indexelés 0-tól kezdődik, azaz az első elem indexe 0 (Kicsit furcsa, gyorsan rááll az ember keze)
+# A nullától való indexelést úgy is lehet felfogni, hogy hányat kell lépni a lista elejétől, hogy elérjük az adott elemet.
+
+# Később majd megnézzük, hogy hogyan lehet a listák elemeit módosítani, törölni, stb.
+
+# -----------------------------------------------
+# Szótárak (asszociatív tömbök)
+# -----------------------------------------------
+# EN: Dictionary (associative array)
+
+# Néha a listák nem elég jók, mert nem az a fontos hogy hanyadik elemet akarjuk elérni, hanem hogy milyen nevűt.
+# Pl. egy telefonkönyvben nem az a fontos, hogy a 3. bejegyzést akarjuk elérni, hanem azt hogy mi pl. 'Alma' telefonszáma.
+# Erre valók a szótárak.
+
+# A szótárak olyan változók, amik KULCS-ÉRTÉK párokat tudnak tárolni.
+# A szótárakat kapcsos zárójellel jelöljük:
+i = {'Alma': 36301111111, 'Barack': 36302222222, 'Cseresznye': 36303333333}
+
+# Megint, nem csak egy típusú dolgot tudnak tárolni, hanem akár vegyesen is:
+j = {'Alma': 1, 'Barack': 2, 'Cseresznye': 'c', 'Dinnye': True, 'Eper': False}
+# Nem csak az értékek, de a kulcsok is lehetnek vegyes típusúak.
+k = {1: 1, 2: 2, 'a': 'c', 'd': True, 'e': False}
+
+# A szótárak elemeit, nagyon hasonlóan a listákhoz, a következő módon tudjuk elérni:
+print("Alma telefonszáma:", i['Alma'])
